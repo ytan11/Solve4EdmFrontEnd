@@ -1165,7 +1165,7 @@ function initAutocomplete() {
       if (place.name == 'Cypress County') {
         lacCounty.setMap(null);
         cypressCounty.setMap(map);
-        weather.style.backgroundImage = 'url(/css/Corn_Prices.png)';
+        weather.style.backgroundImage = 'url(/css/Cypress_Weather.JPG)';
         markers.push(marker1);
         marker1.addListener('click', function(){
           // output.classList.add('show');
@@ -1177,7 +1177,7 @@ function initAutocomplete() {
       if (place.name == 'Lac Ste. Anne County') {
         cypressCounty.setMap(null);
         lacCounty.setMap(map);
-        weather.style.backgroundImage = 'url(/css/Oat_Prices.png)';
+        weather.style.backgroundImage = 'url(/css/LacSteAnne_Weather.JPG)';
         markers.push(marker1);
         marker1.addListener('click', function(){
           // output.classList.add('show');
