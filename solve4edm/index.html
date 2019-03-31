@@ -3,20 +3,52 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Places Search Box</title>
+    <title>MachineLearning Farmer</title>
+    <script data-require="d3@*" data-semver="4.0.0" src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript">
+      d3version4 = d3;
+      window.d3 = null;
+      window.d3version4 = d3version4;
+    </script>
+    <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      d3version3 = d3;
+      window.d3 = null;
+      window.d3version3 = d3version3;
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/weather.css">
+    <link rel="stylesheet" type="text/css" href="./css/chart.css">
+    <link rel="stylesheet" type="text/css" href="./css/cost.css">
+    <link rel="stylesheet" type="text/css" href="./css/staticLine.css">
   </head>
   <body>
     <div id="map-container">
       <input id="pac-input" class="controls" type="text" placeholder="Search Box">
       <div id="map"></div>
     </div>
+    <div id="weather"></div>
     <div id="goback"></div>
-    <!-- <div id="output"> -->
-      
+    <div id="chart1"><svg id="chart-neg-pos" class="chart"></svg></div>
+    <div id="line-chart">
+      <div id="line-chart-image"></div>
+      <div id="line-chart-right">
+        <select size="5" id="line-chart-select">
+          <option value="Corn">Corn</option>
+          <option value="Canola">Canola</option>
+          <option value="Wheat" selected>Wheat</option>
+          <option value="Oat">Oat</option>
+          <option value="Soybean">Soybean</option>
+        </select>
+      </div>
     </div>
+    <div id="cost"></div>
+    <!-- <div id="output"> -->
     <script type="text/javascript" src="./js/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9GgrCl3C0MS7ut2F7WRXRjzENctP11gw&libraries=places&callback=initAutocomplete"
          async defer></script>
+    <script type="text/javascript" src="./js/chart.js"></script>
+    <script type="text/javascript" src="./js/staticLines.js"></script>
   </body>
 </html>

@@ -1,0 +1,54 @@
+      .negative rect{
+        fill: #ce4c4c;
+      }
+      .positive rect{
+        fill: #7ae2a2;
+      }
+
+      .chart {
+
+        display: block;
+        margin-bottom: 8px
+        margin-right: 0px;
+      }
+
+      .bar {
+        fill: #d8d8d8;
+      }
+
+      text {
+        font: 8px sans-serif;
+        font-weight: bold;
+        font-family: 'Ubuntu', sans-serif;
+      }
+
+      .bar text {
+        fill: #000;
+      }
+
+      .negative.bar text {
+        text-anchor: end;
+      }
+
+      .axis text {
+        fill: black;
+      }
+
+      .axis.y path {
+        stroke: #d8d8d8;
+      }
+      .axis.y text {
+        text-anchor: end;
+      }
+
+      rect.current, text.current {
+        fill: #009400;
+      }
+
+      rect.average {
+        fill: #808080;
+      }
+
+      text.average {
+        fill: #4a4a4a;
+      }

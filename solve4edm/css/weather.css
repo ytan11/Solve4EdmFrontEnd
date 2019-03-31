@@ -1,0 +1,10 @@
+#weather {
+	position: fixed;
+	left: 50%;
+	top: 5%;
+	width: 50%;
+	height: 20%;
+	border: 1px solid red;
+	background-image: none;
+	background-size: 100% 100%
+}

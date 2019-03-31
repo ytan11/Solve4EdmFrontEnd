@@ -1,0 +1,22 @@
+[  
+    {  
+        "name": "Soybean",
+        "value": 31
+    },
+    {  
+        "name": "Wheat",
+        "value": 17
+    },
+    {  
+        "name": "Corn",
+        "value": 7
+    },
+    {
+      "name": "Canola",
+      "value": -23
+    },
+    {
+      "name": "Oats",
+      "value": -81
+    }
+]
