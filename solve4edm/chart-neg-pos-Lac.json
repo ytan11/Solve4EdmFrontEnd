@@ -1,0 +1,14 @@
+[  
+    {  
+        "name": "Soybean",
+        "value": 31
+    },
+    {  
+        "name": "Wheat",
+        "value": 17
+    },
+    {
+      "name": "Canola",
+      "value": -23
+    }
+]

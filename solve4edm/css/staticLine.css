@@ -9,9 +9,10 @@
 	position: absolute;
 	left: 0;
 	height: 100%;
-	background: #555;
+	background: #fff;
 	background-image: url('/css/Wheat_prices.png');
 	background-size: contain;
+	background-repeat: no-repeat;
 }
 #line-chart-right {
 	width: 20%;

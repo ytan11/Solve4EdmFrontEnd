@@ -1140,6 +1140,28 @@ function initAutocomplete() {
         position: place.geometry.location
       });
       var weather = document.getElementById('weather');
+      var cropsToShow = {
+        'Cypress County': ['Wheat', 'Canola', 'Corn', 'Oat'],
+        'Lac Ste. Anne County': ['Wheat', 'Canola', 'Soybean']
+      }
+      var showAndHideCrops = function(name) {
+        var select = document.getElementById('line-chart-select')
+        var options = document.getElementById('line-chart-select').getElementsByTagName('OPTION');
+        console.log(options);
+        Array.prototype.forEach.call(options, function(o) {
+          if(cropsToShow[name].includes(o.value)) {
+            o.classList.remove('hidden');
+          } else {
+            o.classList.add('hidden');
+          }
+        });
+        select.value = 'Wheat';
+        document.getElementById('line-chart-image').style.backgroundImage = "url('/css/Wheat_Prices.png')";
+
+      }
+      showAndHideCrops(place.name);
+
+      var costDom = document.getElementById('cost');
       if (place.name == 'Cypress County') {
         lacCounty.setMap(null);
         cypressCounty.setMap(map);
@@ -1148,8 +1170,9 @@ function initAutocomplete() {
         marker1.addListener('click', function(){
           // output.classList.add('show');
           container.classList.add('shrink');
-
         })
+        loadHistogram('chart-neg-pos-Cypress.json');
+        cost.style.backgroundImage = "url('/css/Cost Estimates Cypress.JPG')";
       }
       if (place.name == 'Lac Ste. Anne County') {
         cypressCounty.setMap(null);
@@ -1159,8 +1182,9 @@ function initAutocomplete() {
         marker1.addListener('click', function(){
           // output.classList.add('show');
           container.classList.add('shrink');
-
         })
+        loadHistogram('chart-neg-pos-Lac.json');
+        cost.style.backgroundImage = "url('/css/Cost Estimates Lac Ste Anne.JPG')";
       }
 
       // Create a marker for each place.

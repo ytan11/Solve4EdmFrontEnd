@@ -1,4 +1,4 @@
-(function(){
+var loadHistogram = function(jsonFileName){
   var d3 = window.d3version4;
   var highlight = (d) => {
     if (d.current) { return 'current'; }
@@ -6,7 +6,8 @@
   };
   
   var render = (selector, settings, data) => {
-
+    // remove previous chart info
+    document.getElementById('chart-neg-pos').innerHTML = '';
     /**
      * prepare sizes
      */
@@ -94,7 +95,7 @@
       });
   };
   
-  d3.json('chart-neg-pos.json', data => {
+  d3.json(jsonFileName, data => {
     var BAR_VALUE_WIDTH = 16;
     var BAR_VALUE_PADDING = 4;
     var Y_AXIS_LABEL_WIDTH = 56;
@@ -112,4 +113,4 @@
     
     render('#chart-neg-pos', settings, data);
   });
-})();
+}
